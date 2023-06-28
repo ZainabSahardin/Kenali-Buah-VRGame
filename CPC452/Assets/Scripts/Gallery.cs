@@ -5,12 +5,12 @@ using System.Linq;
 
 public static class Gallery
 {
-    public static int currentID = 0;
-    public static List<Item> items = ReadFile("Assets/Media/Items.csv", ',');
+    public static int currentIndex = 0;
+    public static List<Fruit> fruits = ReadFile("Assets/Media/Items.csv", ',');
 
-    private static List<Item> ReadFile(string filePath, char delimiter)
+    private static List<Fruit> ReadFile(string filePath, char delimiter)
     {
-        List<Item> fileData = new List<Item>();
+        List<Fruit> fileData = new List<Fruit>();
         using (var reader = new StreamReader(filePath))
         {
             // Skip the header line
@@ -22,16 +22,22 @@ public static class Gallery
                 string[] fields = line.Split(delimiter);
 
                 // Create a new Person instance and populate its properties
-                Item item = new Item
+                Fruit fruit = new Fruit
                 {
-                    itemID = int.Parse(fields[0]),
+                    ID = int.Parse(fields[0]),
                     name = fields[1],
                     pronunciation = fields[2]
                 };
 
-                fileData.Add(item);
+                fileData.Add(fruit);
             }
         }
         return fileData.OrderBy(ID => Random.value).ToList();
+    }
+
+    public static Fruit GetNextFruit()
+    {
+        currentIndex++;
+        return fruits[currentIndex];
     }
 }
