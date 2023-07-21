@@ -6,8 +6,8 @@ This project focuses on low-polygon virtual reality (VR) games with a kid-friend
 This system is deployed to Meta Quest 2 which comes with various input devices to capture the player's movements and actions. Handheld controllers and hand-tracking sensors are optimized for this project.
 
 A collaboration of:
-Noor Maisarah Binti Ghazali 
-Siti Sakinah Binti Ahmad Sanusi 
-Siti Zainab Binti Sahardin 
-Wong Chong Yang
+- Noor Maisarah Binti Ghazali
+- Siti Sakinah Binti Ahmad Sanusi
+- Siti Zainab Binti Sahardin
+- Wong Chong Yang
 
